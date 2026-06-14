@@ -626,9 +626,9 @@ services:
         ports:
             - '${FILEBROWSER_PORT:-8081}:80'
         volumes:
-            - /home/ubuntu/services/recordings:/srv:Z
+            - ./recordings:/srv:Z
             - filebrowser_data:/database
-        user: "${UID:-1000}:${GID:-1000}"
+        user: "1000:1000"
         networks:
             meet.jitsi:
 
